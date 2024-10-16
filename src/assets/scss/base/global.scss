@@ -41,42 +41,9 @@ body {
 
 // Логотип==============================
 
-@keyframes logoBeat {
-  0% {
-    color: var(--text-color);
-    font-weight: 400;
-  }
-  15% {
-    color: var(--signal-text-color);
-    font-weight: 700;
-  }
-  25% {
-    color: var(--text-color);
-    font-weight: 400;
-  }
-  35% {
-    color: var(--signal-text-color);
-    font-weight: 700;
-  }
-  100% {
-    color: var(--text-color);
-    font-weight: 400;
-  }
-}
-
 .logo {
   font-size: 24px;
   z-index: 10;
-}
-
-.logo span {
-  font-weight: 700;
-  animation: logoBeat 2s infinite;
-  transition: var(--transition);
-}
-
-.logo:hover span {
-  animation-play-state: paused;
 }
 
 .link {
@@ -107,12 +74,15 @@ body {
 // Сердце================================
 
 .heart {
-  display: inline-block;
   width: 100px;
   height: 90px;
   position: relative;
   margin: 50px auto;
   animation: heartbeat 1.5s infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
 .heart::before,
@@ -153,6 +123,38 @@ body {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+// Текстовая анимация===================
+
+.text-animation {
+  position: relative;
+
+  &::before {
+    content: attr(data-text);
+    width: 0;
+    height: 100%;
+    color: var(--signal-text-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-right: 2px solid var(--text-color);
+    animation: print 5s linear infinite;
+    font-weight: 700;
+  }
+}
+
+@keyframes print {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
   }
 }
 
