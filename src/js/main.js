@@ -14,9 +14,9 @@ const swiper = new Swiper(".swiper__my-skills", {
   // Optional parameters
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 0,
   },
-  speed: 1000,
+  speed: 5000,
   slidesPerView: 2,
   breakpoints: {
     768: {

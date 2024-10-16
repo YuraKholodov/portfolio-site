@@ -5,12 +5,13 @@
   padding-top: 100px;
   padding-bottom: 50px;
   overflow: hidden;
+  border-bottom: 2px solid var(--dark-border-color);
 
   &__inner {
     min-height: 800px;
     display: flex;
     flex-wrap: nowrap;
-    gap: 40px;
+    gap: 0 40px;
 
     @include mini-desktop {
       flex-direction: column;
@@ -19,6 +20,7 @@
 
     &-col {
       width: 50%;
+      min-height: 600px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,7 +32,8 @@
       }
 
       &-descr {
-        background-image: url("../images/abstract.png");
+        background-image: url("../images/abstract.png"),
+          url("../images/bg-lightnes.png");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 80%;

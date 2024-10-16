@@ -39,6 +39,14 @@ body {
   padding: 0 10px;
 }
 
+.section {
+  padding: 100px 0;
+
+  @include mobile {
+    padding: 50px 0;
+  }
+}
+
 // Логотип==============================
 
 .logo {
@@ -216,4 +224,20 @@ body {
   bottom: 45%;
   width: 100%;
   transform: rotate(-45deg);
+}
+
+// Анимация вращения
+
+.rotate-animation {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(50deg);
+  }
 }

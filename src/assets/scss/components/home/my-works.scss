@@ -1,0 +1,19 @@
+.my-works {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--general-dark-bg);
+  border-bottom: 2px solid var(--dark-border-color);
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    color: var(--signal-text-color);
+    margin-bottom: 40px;
+  }
+
+  &__library {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -4,6 +4,7 @@ export function burgerMenu() {
   header.addEventListener("click", toggleBurgerMenu);
 
   function toggleBurgerMenu(event) {
+    event.preventDefault();
     const target = event.target;
     const btnBurger = target.closest(".burger-icon");
     const navLink = target.closest(".header__nav-link");
