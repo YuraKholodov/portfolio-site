@@ -27,3 +27,20 @@ const swiper = new Swiper(".swiper__my-skills", {
     },
   },
 });
+
+const myWorkSwiper = new Swiper(".my-works__swiper", {
+  // Optional parameters
+  lazy: true,
+  autoplay: {
+    delay: 4000,
+  },
+  slidesPerView: 3,
+  spaceBetween: 50,
+  grid: { rows: 2 },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
