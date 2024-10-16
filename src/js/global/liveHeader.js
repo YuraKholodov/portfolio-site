@@ -1,7 +1,7 @@
 export function headerScroll() {
   const body = document.querySelector(".body");
   const header = body.querySelector(".header");
-  const headerHeight = header.scrollHeight;
+  // const headerHeight = header.scrollHeight;
 
   const scrollPosition = () =>
     document.documentElement.scrollTop || window.pageYOffset;

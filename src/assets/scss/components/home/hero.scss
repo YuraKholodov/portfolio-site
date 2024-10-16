@@ -4,14 +4,28 @@
   color: var(--text-color);
   padding-top: 100px;
   padding-bottom: 50px;
-  overflow: hidden;
+  overflow-x: hidden;
   border-bottom: 2px solid var(--dark-border-color);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -10%;
+    width: 50%;
+    height: 50%;
+    background-image: url("./../images/bg-lightnes.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 
   &__inner {
     min-height: 800px;
     display: flex;
     flex-wrap: nowrap;
-    gap: 0 40px;
+    gap: 40px;
 
     @include mini-desktop {
       flex-direction: column;
@@ -20,7 +34,7 @@
 
     &-col {
       width: 50%;
-      min-height: 600px;
+      min-height: 500px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -29,6 +43,10 @@
 
       @include mini-desktop {
         width: 100%;
+      }
+
+      @include mobile {
+        min-height: 400px;
       }
 
       &-descr {
@@ -61,6 +79,7 @@
     background-color: rgba(255, 255, 255, 0.04);
     border-radius: 50%;
     overflow: hidden;
+    z-index: 1;
 
     @include mobile {
       width: 300px;

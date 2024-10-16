@@ -79,6 +79,38 @@ body {
   }
 }
 
+// Текстовая анимация===================
+
+.text-animation {
+  position: relative;
+
+  &::before {
+    content: attr(data-text);
+    width: 0;
+    height: 100%;
+    color: var(--signal-text-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-right: 2px solid var(--text-color);
+    animation: print 5s linear infinite;
+    font-weight: 700;
+  }
+}
+
+@keyframes print {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
 // Сердце================================
 
 .heart {
@@ -131,38 +163,6 @@ body {
   }
   100% {
     transform: scale(1);
-  }
-}
-
-// Текстовая анимация===================
-
-.text-animation {
-  position: relative;
-
-  &::before {
-    content: attr(data-text);
-    width: 0;
-    height: 100%;
-    color: var(--signal-text-color);
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    border-right: 2px solid var(--text-color);
-    animation: print 5s linear infinite;
-    font-weight: 700;
-  }
-}
-
-@keyframes print {
-  0%,
-  10%,
-  100% {
-    width: 0;
-  }
-  70%,
-  90% {
-    width: 100%;
   }
 }
 
@@ -229,7 +229,7 @@ body {
 // Анимация вращения
 
 .rotate-animation {
-  animation: rotate 2s linear infinite;
+  animation: rotate 3s linear infinite;
 }
 
 @keyframes rotate {
@@ -237,7 +237,19 @@ body {
   100% {
     transform: rotateY(0deg);
   }
-  50% {
+  25% {
     transform: rotateY(50deg);
+  }
+  75% {
+    transform: rotateY(-50deg);
+  }
+}
+
+@keyframes rotate-yula {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
   }
 }

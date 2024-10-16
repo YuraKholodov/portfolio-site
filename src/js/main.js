@@ -34,9 +34,22 @@ const myWorkSwiper = new Swiper(".my-works__swiper", {
   autoplay: {
     delay: 4000,
   },
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 50,
   grid: { rows: 2 },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+      grid: { rows: 2 },
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      grid: { rows: 2 },
+    },
+  },
 
   // If we need pagination
   pagination: {

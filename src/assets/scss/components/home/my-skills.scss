@@ -1,0 +1,53 @@
+.my-skills {
+  position: relative;
+  background-color: var(--general-dark-bg);
+  color: var(--text-color);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -30%;
+    width: 100%;
+    height: 100%;
+    background-image: url("./../images/bg-lightnes.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__inner{
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    color: var(--signal-text-color);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 500px;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--general-gray-bg);
+    padding: 20px;
+    border-radius: var(--skills-border-radius);
+    overflow: hidden;
+
+    &:hover {
+      .my-skills__item-img {
+        animation: rotate-yula 2s linear infinite;
+      }
+    }
+  }
+}

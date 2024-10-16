@@ -8,6 +8,7 @@
   top: 0;
   border-bottom: 2px solid var(--dark-border-color);
   transition: var(--transition);
+  z-index: 10;
 
   &--hidden {
     visibility: hidden;
