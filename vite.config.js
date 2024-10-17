@@ -22,6 +22,7 @@ export default defineConfig({
     }),
   ],
   root: "./src",
+  publicDir: "./src/assets",
   build: {
     outDir: "../docs",
     emptyOutDir: true,
