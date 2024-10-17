@@ -15,7 +15,7 @@
     right: -10%;
     width: 50%;
     height: 50%;
-    background-image: url("./../images/bg-lightnes.png");
+    background-image: url("./../assets/images/bg-lightnes.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -50,8 +50,8 @@
       }
 
       &-descr {
-        background-image: url("../images/abstract.png"),
-          url("../images/bg-lightnes.png");
+        background-image: url("./../assets/images/abstract.png"),
+          url("./../assets/images/bg-lightnes.png");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 80%;
