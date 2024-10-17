@@ -23,11 +23,12 @@ export default defineConfig({
   ],
   root: "./src",
   publicDir: "./src/assets",
+  base: "./",
   build: {
     outDir: "../docs",
     emptyOutDir: true,
     rollupOptions: {
-      // input: { main: "./src/index.html" },
+      input: { main: "./src/index.html" },
       output: {
         // Настройка вывода для разных типов файлов
         assetFileNames: (assetInfo) => {
