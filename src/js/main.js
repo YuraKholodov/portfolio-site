@@ -7,6 +7,8 @@ import { burgerMenu } from "./global/burgerMenu";
 
 import { headerScroll } from "./global/liveHeader";
 
+import { resizableSwiper } from "./global/resizableSwiper";
+
 burgerMenu();
 headerScroll();
 
@@ -55,5 +57,14 @@ const myWorkSwiper = new Swiper(".my-works__swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+resizableSwiper("(max-width: 768px)", ".my-skills__swiper", {
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 4000,
   },
 });

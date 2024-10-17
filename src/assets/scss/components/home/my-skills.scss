@@ -2,6 +2,7 @@
   position: relative;
   background-color: var(--general-dark-bg);
   color: var(--text-color);
+  overflow-x: hidden;
 
   &::after {
     position: absolute;
@@ -16,7 +17,7 @@
     background-repeat: no-repeat;
   }
 
-  &__inner{
+  &__inner {
     position: relative;
     z-index: 1;
   }
@@ -25,6 +26,13 @@
     color: var(--signal-text-color);
     font-weight: 700;
     text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__swiper {
+    @include small-tablet {
+      height: 500px;
+    }
   }
 
   &__list {
@@ -32,10 +40,26 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 500px;
     gap: 30px;
+
+    @include mini-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet {
+      gap: unset;
+    }
+
+    &.swiper-wrapper {
+      display: grid;
+
+      @include small-tablet {
+        display: flex;
+      }
+    }
   }
 
   &__item {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     gap: 20px;
