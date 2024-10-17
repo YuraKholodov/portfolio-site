@@ -3,7 +3,7 @@
   color: var(--text-color);
   background-color: var(--general-dark-bg);
   border-bottom: 2px solid var(--dark-border-color);
-  overflow: hidden;
+  overflow-x: hidden;
 
   &__title {
     text-align: center;

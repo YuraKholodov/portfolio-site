@@ -39,6 +39,12 @@
       }
     }
 
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
     &-link {
       padding: 10px 0;
     }
@@ -62,3 +68,21 @@
     }
   }
 }
+
+.telegram-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & svg {
+    background-color: var(--signal-text-color);
+    border-radius: 50%;
+  }
+
+  &:hover svg {
+    box-shadow: 0 5px 35px var(--signal-text-color);
+  }
+}
+
+
+

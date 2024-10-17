@@ -1,4 +1,4 @@
-.my-skills {
+.services {
   position: relative;
   background-color: var(--general-dark-bg);
   color: var(--text-color);
@@ -9,9 +9,9 @@
     position: absolute;
     content: "";
     top: 0;
-    right: -30%;
-    width: 100%;
-    height: 100%;
+    left: 0;
+    width: 50%;
+    height: 50%;
     background-image: url("./../images/bg-lightnes.png");
     background-position: center;
     background-size: contain;
@@ -20,26 +20,20 @@
 
   &__inner {
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 
   &__title {
+    text-align: center;
     color: var(--signal-text-color);
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  &__swiper {
-    @include small-tablet {
-      height: 500px;
-    }
+    margin-bottom: 40px;
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 500px;
+    grid-auto-rows: 300px;
     gap: 30px;
 
     @include mini-desktop {
@@ -47,32 +41,31 @@
     }
 
     @include small-tablet {
-      gap: unset;
-    }
-
-    &.swiper-wrapper {
-      display: grid;
-
-      @include small-tablet {
-        display: flex;
-      }
+      grid-template-columns: 1fr;
     }
   }
 
   &__item {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     background-color: var(--general-gray-bg);
     padding: 20px;
-    border-radius: var(--skills-border-radius);
+    border-radius: var(--services-border-radius);
     overflow: hidden;
 
-    &:hover {
-      .my-skills__item-img {
-        animation: rotate-yula 2s linear infinite;
-      }
+    &-title {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    &-img {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--services-border-radius);
     }
   }
 }

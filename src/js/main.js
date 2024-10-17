@@ -9,8 +9,11 @@ import { headerScroll } from "./global/liveHeader";
 
 import { resizableSwiper } from "./global/resizableSwiper";
 
+import { getCurYear } from "./global/getCurrentYear";
+
 burgerMenu();
 headerScroll();
+getCurYear();
 
 const swiper = new Swiper(".swiper__my-skills", {
   // Optional parameters
